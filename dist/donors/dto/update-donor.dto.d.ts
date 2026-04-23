@@ -1,12 +1,12 @@
-export declare class DonorEntity {
-    id: number;
-    fullName: string;
+import { CreateDonorDto } from './create-donor.dto';
+export declare class UpdateDonorDto implements Partial<CreateDonorDto> {
+    fullName?: string;
     email?: string;
-    phone: string;
-    age?: number;
-    bloodType: string;
+    phone?: string;
+    age?: number | string;
+    bloodType?: string;
     address?: string;
-    city: string;
+    city?: string;
     lastDonation?: string;
     medicalConditions?: string;
     emergencyContact?: string;
@@ -15,5 +15,4 @@ export declare class DonorEntity {
     nirankarType?: 'Nirankar' | 'Non Nirankari';
     source?: string;
     status?: 'pending' | 'accepted' | 'rejected';
-    registeredAt?: string;
 }
